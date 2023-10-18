@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmiqfn3xlyxy8"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_7bnfx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sc85w"]
+bg_color = Color(0.2, 0.2, 0.2, 0.811765)
+shadow_offset = Vector2(2, 2)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 381.0
+offset_top = 149.0
+offset_right = 800.0
+offset_bottom = 175.0
+size_flags_horizontal = 4
+text = "2D Platformer"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0692124
+anchor_top = 4.26923
+anchor_right = 0.0572792
+anchor_bottom = 5.38462
+offset_left = 186.0
+offset_top = 62.0
+offset_right = 232.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_sc85w")
+text = "Start"
+script = ExtResource("1_7bnfx")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Label/StartButton" to="Label/StartButton" method="_on_pressed"]
